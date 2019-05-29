@@ -3,8 +3,128 @@
 @import "libs"
 
 /*==========  user style  ==========*/
-.test
-	color: #000
+body
+	font-family: 'Didact Gothic', sans-serif
+	overflow-x: hidden
+
+a
+	transition: .3s
+	&:link
+		outline: none 0
+	&:visited
+		outline: none 0
+	&:hover
+		text-decoration: none
+	&:active
+		outline: none 0
+
+ul
+	list-style-type: none
+	margin: 0
+	padding: 0
+
+.ta-r
+	text-align: right
+.btn
+	background-color: $accent
+	border-radius: 10px
+	padding: 10px 15px
+	color: #fff
+	font-weight: bold
+	line-height: 1.3
+	display: inline-block
+	transition: .3s
+	&:hover
+		box-shadow: 0px 1px 12px 1px rgba(0, 0, 0, 0.49)
+		color: #fff
+		transform: scale(1.02)
+
+.fix-center
+	margin-left: -15px
+	margin-right: 15px
+
+.page-header
+	.header-inner
+		.top-info
+			padding: 5px 0
+			border-bottom: 1px solid #ccc
+			&__contacts
+				display: flex
+			&__phone-mail
+				a
+					display: inline-block
+					color: $text-light
+					line-height: 1
+					padding: 0 15px
+					font-size: 17px
+					&:hover
+						color: $accent
+				li:first-child
+					a
+						border-right: 1px solid $text-light
+			&__social
+				justify-content: flex-end
+				li
+					margin-left: 15px
+				a
+					color: $text-light
+					font-size: 24px
+					display: inline-block
+					&:hover
+						color: $accent
+						transform: scale(1.3)
+	.top-menu
+		padding: 15px
+		.top-logo
+			padding-right: 50px
+			img
+				width: 100%
+				transition: .3s
+				&:hover
+					transform: scale(1.1)
+		.top-navigation
+			display: flex
+			justify-content: center
+			li
+				padding: 0 7px
+				a
+					display: inline-block
+					text-transform: uppercase
+					font-weight: bold
+					color: #484848
+					&:hover
+						color: $accent
+.slider-wrapper
+	.slider-item
+		height: 500px
+		overflow: hidden
+		position: relative
+		background-size: cover
+		background-repeat: no-repeat
+		&__text-wrap
+			position: relative
+			height: inherit
+		&__text
+			position: absolute
+			left: 50%
+			transform: translateX(-50%)
+		.slider-item__text
+			top: 50%
+			transform: translate(-50%,-50%)
+			p
+				text-align: right
+				color: #fff
+				font-size: 50px
+				font-weight: bold
+				background-color: rgba(255, 255, 255, 0.28)
+				border-radius: 10px
+				padding: 25px
+				span
+					color: $accent
+					font-weight: bold
+		.slider-text-1
+			
+		
 /*==========  user style  ==========*/
 
 @import "media" // Always at the end

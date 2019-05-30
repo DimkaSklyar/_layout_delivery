@@ -87,6 +87,11 @@ ul
 			justify-content: center
 			li
 				padding: 0 7px
+				position: relative
+				color: #484848
+				font-weight: bold
+				text-transform: uppercase
+				cursor: pointer
 				a
 					display: inline-block
 					text-transform: uppercase
@@ -94,13 +99,41 @@ ul
 					color: #484848
 					&:hover
 						color: $accent
+			.with-submenu
+				&:hover ul
+					opacity: 1
+					left: 0
+				& > ul
+					position: absolute
+					z-index: 99
+					width: 250px
+					padding: 15px
+					background-color: #fff
+					border-bottom-left-radius: 15px
+					border-bottom-right-radius: 15px
+					top: 20px
+					overflow: hidden
+					left: -9999px
+					opacity: 0
+					transition: opacity .3s
+					border-top: 10px solid transparent
+					li:not(:last-child)
+						margin-bottom: 10px
 .slider-wrapper
 	.slider-item
-		height: 500px
+		height: 65vh
 		overflow: hidden
 		position: relative
 		background-size: cover
 		background-repeat: no-repeat
+		&:before
+			position: absolute
+			content: ''
+			top: 0
+			bottom: 0
+			right: 0
+			left: 0
+			background-color: rgba(0,0,0,.4)
 		&__text-wrap
 			position: relative
 			height: inherit
@@ -112,30 +145,29 @@ ul
 			top: 50%
 			transform: translate(-50%,-50%)
 			p
-				text-align: right
+				text-align: center
 				color: #fff
-				font-size: 50px
+				font-size: 90px
 				font-weight: bold
-				background-color: rgba(0, 0, 0, 0.38)
 				border-radius: 10px
 				padding: 25px
 				span
-					color: $accent
+					color: #00d1ff
 					font-weight: bold
 		.slider-text-2
 			p
-				background-color: rgba(0, 0, 0, 0.38)
-				font-size: 39px
+				text-align: left
+				font-size: 70px
 		.slider-text-3
 			p
-				background-color: rgba(0, 0, 0, 0.38)
-				font-size: 54px
+				text-align: right
+				font-size: 90px
 		
 section
-	padding: 60px 0
+	padding: 80px 0
 	.title-wrap
 		text-align: center
-		margin-bottom: 80px
+		margin-bottom: 120px
 	.title-section
 		text-align: center
 		font-size: 45px
@@ -196,10 +228,11 @@ section
 			background: url('../img/icon_number/005-number-4.svg')
 
 .shops
-	padding-bottom: 80px
+	padding-bottom: 40px
 	.btn
 		font-size: 26px
 		padding: 10px 30px
+		margin-top: 50px
 	.container
 		text-align: center
 	.row
@@ -226,10 +259,10 @@ section
 
 .banner-section
 	&-wrapper
-		padding: 50px 0
+		padding: 90px 0 100px
 		background: url('../img/map.jpg')
 		background-size: cover
-		background-position: 50%
+		background-position: 100% 100%
 		background-repeat: no-repeat
 		text-align: center
 		position: relative
@@ -240,20 +273,187 @@ section
 			bottom: 0
 			left: 0
 			right: 0
-			background-color: rgba(0,0,0,.4)
+			background-color: rgba(0, 0, 0, 0.74)
 		h3
-			font-size: 32px
+			font-size: 52px
 			color: #fff
 			text-align: center
 			line-height: 1.5
 			display: inline-block
 			padding: 15px
 			border-radius: 15px
+			span
+				color: #00d1ff
+	.banner-2
+		h3
+			font-size: 40px
 	.btn-other
 		background-color: #fff
-		color: $accent
-		font-size: 22px
-		padding: 10px 30px
+		color: #00d1ff
+		font-size: 24px
+		padding: 15px 40px
+
+.pay-clients
+	padding-top: 40px
+	&-item
+		padding: 20px
+		&__img
+			img
+				width: 100%
+		&__text
+			text-align: center
+			font-size: 20px
+			p
+				padding-top: 20px
+				margin-bottom: 0
+				span
+					font-weight: bold
+					color: #00d1ff
+
+.comments
+	padding-top: 0px
+	&-item-wrap
+		padding-bottom: 40px
+	&-item
+		background-color: #f6f6f6
+		border-radius: 15px
+		padding: 15px
+		position: relative
+		margin-bottom: 30px
+		transition: .3s
+		&:hover
+			filter: drop-shadow(0 3px 6px rgba(0,0,0,0.36))
+		&:before
+			position: absolute
+			content: ''
+			border: 20px solid #f6f6f6
+			bottom: -40px
+			right: 15px
+			border-left-color: transparent
+			border-bottom-color: transparent
+		cite
+			font-weight: bold
+			margin-bottom: 15px
+			display: inline-block
+			font-size: 20px
+		blockquote
+			height: 175px
+			overflow-y: auto
+			font-size: 17px
+			margin-bottom: 0
+	&-item-wrap:nth-child(even)
+		.comments-item
+			background-color: $accent
+			&:before
+				border: 20px solid $accent
+				border-left-color: transparent
+				border-bottom-color: transparent
+			cite
+				color: #fff
+			blockquote
+				color: #fff
+
+.social
+	padding-top: 0
+	.title-wrap
+		margin-bottom: 10px
+		p
+			margin-top: 40px
+			font-size: 18px
+			color: $accent
+	ul
+		display: flex
+		justify-content: center
+		li
+			padding: 20px
+			font-size: 60px
+			transition: .3s
+			&:hover
+				transform: scale(1.3)
+		li:nth-child(1)
+			a
+				color: #00e676
+		li:nth-child(2)
+			a
+				color: #c30098
+		li:nth-child(3)
+			a
+				color: #5e83ab
+		li:nth-child(4)
+			a
+				color: #3666a1
+				
+
+.page-footer
+	background-color: #000
+	color: #fff
+	padding: 40px 0 20px
+	&-inner
+		border-bottom: 1px solid #666
+		padding: 0 0 30px
+	h2
+		text-transform: uppercase
+		font-size: 20px
+	li
+		margin-bottom: 10px
+		i
+			font-size: 20px
+			margin-right: 5px
+		a
+			color: #fff
+			&:hover
+				color: $accent
+	h3
+		margin-bottom: 15px
+	#sub-wrap
+		position: relative
+		margin-bottom: 15px
+		button
+			position: absolute
+			top: 0
+			right: 0
+			padding: 5px 15px
+			line-height: 1
+			font-size: 25px
+			background-color: transparent
+			cursor: pointer
+			outline: none 0
+			border: none
+			transition: .3s
+			&:hover
+				right: -5px
+				color: $accent
+		input
+			border-radius: 15px
+			padding: 5px 15px
+			width: 100%
+			border: none
+			outline: none 0
+	.footer-social
+		display: flex
+		justify-content: flex-end
+		li
+			margin-left: 15px
+			i
+				font-size: 25px
+				transition: .2s
+				&:hover
+					transform: scale(1.3)
+	.copyright
+		p
+			text-align: center
+			padding: 20px 0
+.slick-slide
+	&:focus
+		border: none
+		outline: none 0
+.slick-dots
+	bottom: -40px
+.slick-dots li button:before
+	font-size: 25px
+.slick-dots li.slick-active button:before
+	color: #00d1ff
+
 /*==========  user style  ==========*/
 
 @import "media" // Always at the end

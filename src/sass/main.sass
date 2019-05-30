@@ -116,15 +116,144 @@ ul
 				color: #fff
 				font-size: 50px
 				font-weight: bold
-				background-color: rgba(255, 255, 255, 0.28)
+				background-color: rgba(0, 0, 0, 0.38)
 				border-radius: 10px
 				padding: 25px
 				span
 					color: $accent
 					font-weight: bold
-		.slider-text-1
-			
+		.slider-text-2
+			p
+				background-color: rgba(0, 0, 0, 0.38)
+				font-size: 39px
+		.slider-text-3
+			p
+				background-color: rgba(0, 0, 0, 0.38)
+				font-size: 54px
 		
+section
+	padding: 60px 0
+	.title-wrap
+		text-align: center
+		margin-bottom: 80px
+	.title-section
+		text-align: center
+		font-size: 45px
+		position: relative
+		padding: 0 20px
+		display: inline-block
+		background-color: #fff
+	.title-section-decoration
+		display: block
+		height: 1px
+		width: 100%
+		background-color: #c1c1c1
+		margin-top: -35px
+
+.how-to-work
+	&__item
+		text-align: center
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		height: 100%
+		background-color: rgba(241, 241, 241, 0.4)
+		border-radius: 15px
+		padding: 10px
+		transition: .3s
+		&:hover
+			box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)
+		.how-to-work__img
+			padding: 20px
+			img
+				width: 100%
+		.how-to-work__description
+			font-size: 16px
+	.col
+		position: relative
+		&:after
+			content: ''
+			position: absolute
+			width: 60px
+			height: 60px
+			left: 50%
+			bottom: -80px
+			transform: translateX(-50%)
+	.col:nth-child(1)
+		&:after
+			background: url('../img/icon_number/001-number.svg')
+	.col:nth-child(2)
+		&:after
+			background: url('../img/icon_number/002-number-1.svg')
+	.col:nth-child(3)
+		&:after
+			background: url('../img/icon_number/003-number-2.svg')
+	.col:nth-child(4)
+		&:after
+			background: url('../img/icon_number/004-number-3.svg')
+	.col:nth-child(5)
+		&:after
+			background: url('../img/icon_number/005-number-4.svg')
+
+.shops
+	padding-bottom: 80px
+	.btn
+		font-size: 26px
+		padding: 10px 30px
+	.container
+		text-align: center
+	.row
+		height: 420px
+		margin-bottom: 30px
+	&-item-wrap
+		padding: 5px !important
+	&-item-wrap:nth-child(odd)
+		align-self: flex-end
+	&-item
+		&-inner
+			height: 100px
+			background-color: rgba(241, 241, 241, 1)
+			display: flex
+			align-items: center
+			margin-bottom: 10px
+			padding: 10px
+			border-radius: 15px
+			transition: .3s
+			&:hover
+				box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)
+			img
+				width: 100%
+
+.banner-section
+	&-wrapper
+		padding: 50px 0
+		background: url('../img/map.jpg')
+		background-size: cover
+		background-position: 50%
+		background-repeat: no-repeat
+		text-align: center
+		position: relative
+		&:before
+			position: absolute
+			content: ''
+			top: 0
+			bottom: 0
+			left: 0
+			right: 0
+			background-color: rgba(0,0,0,.4)
+		h3
+			font-size: 32px
+			color: #fff
+			text-align: center
+			line-height: 1.5
+			display: inline-block
+			padding: 15px
+			border-radius: 15px
+	.btn-other
+		background-color: #fff
+		color: $accent
+		font-size: 22px
+		padding: 10px 30px
 /*==========  user style  ==========*/
 
 @import "media" // Always at the end

@@ -156,6 +156,7 @@ $('.slick-slider-how-to-work').slick({
 		$(".mobile-menu-hidden").slideToggle();
 	});
 
+var mixer = mixitup('.mixitup');
 
 });
 

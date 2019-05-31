@@ -52,6 +52,9 @@ ul
 			border-bottom: 1px solid #ccc
 			&__contacts
 				display: flex
+				+media-breakpoint-down(xs)
+					flex-direction: column
+					text-align: center
 			&__phone-mail
 				a
 					display: inline-block
@@ -62,10 +65,18 @@ ul
 					&:hover
 						color: $accent
 				li:first-child
+					+media-breakpoint-down(xs)
+						margin-bottom: 10px
 					a
 						border-right: 1px solid $text-light
+						+media-breakpoint-down(xs)
+							border: none
 			&__social
 				justify-content: flex-end
+				flex-direction: row
+				+media-breakpoint-down(xs)
+					justify-content: center
+					margin-top: 10px
 				li
 					margin-left: 15px
 				a
@@ -146,6 +157,9 @@ ul
 	.active-menu
 		display: block
 .slider-wrapper
+	.container
+		+media-breakpoint-down(sm)
+			width: 100%
 	.slider-item
 		height: 65vh
 		overflow: hidden
@@ -153,6 +167,10 @@ ul
 		background-size: cover
 		background-repeat: no-repeat
 		min-height: 450px
+		+media-breakpoint-down(sm)
+			min-height: 400px
+		+media-breakpoint-down(xs)
+			min-height: 300px
 		&:before
 			position: absolute
 			content: ''
@@ -180,6 +198,10 @@ ul
 				padding: 25px
 				+media-breakpoint-down(lg)
 					font-size: 60px
+				+media-breakpoint-down(sm)
+					font-size: 40px
+				+media-breakpoint-down(xs)
+					font-size: 25px
 				span
 					color: #00d1ff
 					font-weight: bold
@@ -189,6 +211,11 @@ ul
 				font-size: 70px
 				+media-breakpoint-down(lg)
 					font-size: 50px
+				+media-breakpoint-down(sm)
+					font-size: 30px
+				+media-breakpoint-down(xs)
+					font-size: 25px
+					text-align: center
 		.slider-text-3
 			p
 				text-align: right
@@ -197,6 +224,11 @@ ul
 					font-size: 60px
 				+media-breakpoint-down(md)
 					font-size: 50px
+				+media-breakpoint-down(sm)
+					font-size: 40px
+				+media-breakpoint-down(xs)
+					text-align: center
+					font-size: 30px
 .slick-slider-how-to-work
 	padding-bottom: 40px
 	.slick-dots
@@ -206,6 +238,8 @@ section
 	.title-wrap
 		text-align: center
 		margin-bottom: 120px
+		+media-breakpoint-down(xs)
+			margin-bottom: 40px
 	.title-section
 		text-align: center
 		font-size: 45px
@@ -213,16 +247,22 @@ section
 		padding: 0 20px
 		display: inline-block
 		background-color: #fff
+		+media-breakpoint-down(sm)
+			font-size: 32px
 	.title-section-decoration
 		display: block
 		height: 1px
 		width: 100%
 		background-color: #c1c1c1
 		margin-top: -35px
+		+media-breakpoint-down(sm)
+			margin-top: -30px
 
 .how-to-work
 	+media-breakpoint-down(md)
 		padding-bottom: 0
+	+media-breakpoint-down(xs)
+		padding-top: 40px
 	.col
 		+media-breakpoint-down(md)
 			margin-bottom: 85px
@@ -283,15 +323,24 @@ section
 		font-size: 26px
 		padding: 10px 30px
 		margin-top: 50px
+		+media-breakpoint-down(sm)
+			font-size: 23px
+			padding: 10px 20px
+		+media-breakpoint-down(xs)
+			margin-top: 0
 	.container
 		text-align: center
 	.row
 		height: 420px
 		margin-bottom: 30px
+		+media-breakpoint-down(xs)
+			height: 340px
 	&-item-wrap
 		padding: 5px !important
 	&-item-wrap:nth-child(odd)
 		align-self: flex-end
+		+media-breakpoint-down(xs)
+			align-self: flex-start
 	&-item
 		&-inner
 			height: 100px
@@ -318,6 +367,8 @@ section
 		background-repeat: no-repeat
 		text-align: center
 		position: relative
+		+media-breakpoint-down(xs)
+			padding: 50px 0 50px
 		&:before
 			position: absolute
 			content: ''
@@ -336,6 +387,8 @@ section
 			border-radius: 15px
 			+media-breakpoint-down(md)
 				font-size: 40px
+			+media-breakpoint-down(sm)
+				font-size: 32px
 			span
 				color: #00d1ff
 	.banner-2
@@ -343,11 +396,16 @@ section
 			font-size: 40px
 			+media-breakpoint-down(md)
 				font-size: 32px
+			+media-breakpoint-down(sm)
+				font-size: 23px
 	.btn-other
 		background-color: #fff
 		color: #00d1ff
 		font-size: 24px
 		padding: 15px 40px
+		+media-breakpoint-down(sm)
+			font-size: 20px
+			padding: 10px 25px
 
 .pay-clients
 	padding-top: 40px
@@ -440,6 +498,9 @@ section
 			padding: 20px
 			font-size: 60px
 			transition: .3s
+			+media-breakpoint-down(xs)
+				padding: 10px
+				font-size: 40px
 			&:hover
 				transform: scale(1.3)
 		li:nth-child(1)
@@ -459,7 +520,7 @@ section
 .page-footer
 	background-color: #000
 	color: #fff
-	padding: 40px 0 0
+	padding: 40px 15px 0
 	&-inner
 		border-bottom: 1px solid #666
 		padding: 0 0 30px
@@ -535,7 +596,9 @@ section
 	.slick-dots
 		+media-breakpoint-down(md)
 			bottom: 0
-
+.comments
+	.slick-dots
+		bottom: 0
 .ta-md-c
 	+media-breakpoint-down(md)
 		text-align: center

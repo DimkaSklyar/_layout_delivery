@@ -35,11 +35,19 @@ $('#subscribe-form').submit(function(e){
 });
 
 $(document).ready(function () {
+
 	if ($(window).width() < 992) {
 		$(".how-to-work").find(".row").addClass("slick-slider-how-to-work");
 	}else {
 		$(".how-to-work").find(".row").removeClass("slick-slider-how-to-work");
 	}
+
+	if ($(window).width() < 768) {
+		$(".comments").find(".row").addClass("slick-slider-comments");
+	}else {
+		$(".comments").find(".row").removeClass("slick-slider-comments");
+	}
+
 	$('.slick-slider').slick();
 
 $('.slick-slider-how-to-work').slick({
@@ -58,7 +66,27 @@ $('.slick-slider-how-to-work').slick({
 				}
 			},
 			{
-				breakpoint: 600,
+				breakpoint: 480,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1
+				}
+			}
+			// You can unslick at a given breakpoint now by adding:
+			// settings: "unslick"
+			// instead of a settings object
+		]
+	});
+
+	$('.slick-slider-comments').slick({
+		dots: true,
+		infinite: false,
+		speed: 300,
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		responsive: [
+			{
+				breakpoint: 1024,
 				settings: {
 					slidesToShow: 2,
 					slidesToScroll: 2,

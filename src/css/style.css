@@ -7935,7 +7935,7 @@ html {
 body {
   font-family: 'Didact Gothic', sans-serif;
   overflow-x: hidden;
-  min-width: 320px;
+  min-width: 350px;
 }
 
 a {
@@ -8758,7 +8758,7 @@ section .title-section-decoration {
     background-color: #fff;
     z-index: 999;
     top: 60px;
-    max-width: 100vw;
+    max-width: 100%;
     border-radius: 0 0 15px 15px;
   }
 }
@@ -9099,6 +9099,33 @@ section .title-section-decoration {
 
 .other-page .filter-button .mixitup-control-active {
   background-color: black;
+}
+
+.other-page ol {
+  padding-bottom: 40px;
+}
+
+.other-page ol li {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.other-page ol li a {
+  color: #00a9ce;
+}
+
+.other-page ol li a:hover {
+  color: #68e4ff;
+}
+
+.other-page ol li span {
+  color: #00a9ce;
+  font-weight: bold;
+}
+
+.other-page ol li strong {
+  color: #00a9ce;
+  font-weight: bold;
 }
 
 /*==========  user style  ==========*/

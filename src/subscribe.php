@@ -1,12 +1,12 @@
 <?php 
 if($_POST) 
 { 
-$to = "exampla@example.ru"; //куда отправлять письмо 
+$to = "saleusa.krd@gmail.com"; //куда отправлять письмо 
 $subject = "Подписка!"; //тема 
 $message = '<span style="font-weight:bold;color:#ff6600;font-size:18px;"><i>Подписка!</i> </span><br><br> 
 E-mail: <span style="font-weight:bold;color:#000;">'.$_POST['email']; 
 $headers = "Content-type: text/html; charset=UTF-8 \r\n"; 
-$headers .= "From: info@example-site.ru\r\n"; // от кого, придумайте ящик или укажите почту своего сайта. 
+$headers .= "From: info@saleusa.ru\r\n"; // от кого, придумайте ящик или укажите почту своего сайта. 
 $result = mail($to, $subject, $message, $headers); 
 
 if ($result){ 

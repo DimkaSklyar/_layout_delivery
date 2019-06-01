@@ -34,7 +34,28 @@ $('#subscribe-form').submit(function(e){
 	AjaxFormRequest('subscribe-form','subscribe-form','./subscribe.php');
 });
 
+$("#feedback").submit(function (e) { 
+  e.preventDefault();
+  AjaxFormRequest('message-result', 'feedback', './feedback.php');
+});
+
 $(document).ready(function () {
+
+	$('.image-popup-no-margins').magnificPopup({
+		type: 'image',
+		closeOnContentClick: true,
+		closeBtnInside: false,
+		fixedContentPos: true,
+		mainClass: 'mfp-no-margins mfp-with-zoom', // class to remove default margin from left and right side
+		image: {
+			verticalFit: true
+		},
+		zoom: {
+			enabled: true,
+			duration: 300 // don't foget to change the duration also in CSS
+		}
+	});
+
 
 	if ($(window).width() < 992) {
 		$(".how-to-work").find(".row").addClass("slick-slider-how-to-work");

@@ -133,6 +133,8 @@ ul
 					&:hover
 						color: $accent
 			.with-submenu
+				+media-breakpoint-down(md)
+					margin-bottom: 0
 				&:hover ul
 					opacity: 1
 					left: 0
@@ -152,6 +154,13 @@ ul
 					border-top: 10px solid transparent
 					li:not(:last-child)
 						margin-bottom: 10px
+					+media-breakpoint-down(md)
+						position: relative
+						left: 10px
+						opacity: 1
+						top: 0
+						padding: 0
+						margin-bottom: 0
 	.btn-order
 		+media-breakpoint-down(lg)
 			padding: 10px 7px
